@@ -3,8 +3,8 @@
 // Purdue University Fort Wayne
 // =============================================================================
 // =============================================================================
-// STUDENT NAME: ___________________
-// DATE:         ___________________
+// STUDENT NAME: Zyad Qassim
+// DATE:         10/27/2026
 // =============================================================================
 // OBJECTIVE:
 //   Implement a counted loop using register arithmetic and conditional
@@ -17,7 +17,6 @@
 //   - Simulation output: "[EDUCORE LOG]: Apollo has landed"
 // =============================================================================
 
-    .text
     .global _start
 
 _start:
@@ -48,21 +47,25 @@ sum_loop:
     // Syntax: ADD Xd, Xn, Xm
 
     // YOUR CODE HERE
+    ADD X4, X0, X4
 
     // TODO #2: Increment the iteration count in X5 using X1
     // Syntax: ADD Xd, Xn, Xm
 
     // YOUR CODE HERE
+    ADD X5, X1, X5
 
     // TODO #3: Decrement X0 by subtracting X1, and set flags
     // Syntax: SUBS Xd, Xn, Xm
 
     // YOUR CODE HERE
+    SUBs X0, X0, X1
 
     // TODO #4: Branch back to sum_loop if X0 is NOT zero
     // Syntax: B.NE label
 
     // YOUR CODE HERE
+    B.NE sum_loop
 
     // =========================================================================
     // STEP 3: Signal Completion (Already done for you)
